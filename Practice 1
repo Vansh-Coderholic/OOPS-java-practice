@@ -4,34 +4,35 @@ Marks in mathematics            ≧ 60
 Marks in physics     	            ≧ 50
 Marks in chemistry                 ≧ 40
 */
+
 import java.util.Scanner;
 
 public class Admission{
-public static void main(String[] args){
+    public static void main(String[] args){
 
-Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-int mathsMarks;
-int physicsMarks;
-int chemistryMarks;
+        int mathsMarks;
+        int physicsMarks;
+        int chemistryMarks;
 
-System.out.println("Enter your marks in mathematics: ");
-mathsMarks = scanner.nextInt();
+        System.out.println("Enter your marks in mathematics: ");
+        mathsMarks = scanner.nextInt();
 
-System.out.println("Enter your marks in physics: ");
-physicsMarks = scanner.nextInt();
+        System.out.println("Enter your marks in physics: ");
+        physicsMarks = scanner.nextInt();
 
-System.out.println("Enter your marks in chemistry: ");
-chemistryMarks = scanner.nextInt();
+        System.out.println("Enter your marks in chemistry: ");
+        chemistryMarks = scanner.nextInt();
 
-if(mathsMarks >= 60 && physicsMarks >= 50 && chemistryMarks >= 40){
-System.out.println("You are eligible to take admission");
-}
+        if(mathsMarks >= 60 && physicsMarks >= 50 && chemistryMarks >= 40){
+            System.out.println("You are eligible to take admission");
+        }
 
-else{
-System.out.println("You are not eligible to take admission");
-}
+        else{
+            System.out.println("You are not eligible to take admission");
+        }
 
-scanner.close();
-}
+        scanner.close();
+    }
 }
