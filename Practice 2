@@ -1,0 +1,80 @@
+\* A showroom offers discounts on purchases based on the item type and the purchase amount. The discount rules are as follows:
+- For Clothing:
+- No discount for purchases up to ₹1000
+- 5% discount for purchases between ₹1001 and ₹2000
+- 7.5% discount for purchases between ₹2001 and ₹3000
+- 10% discount for purchases above ₹3000
+- For Footwear:
+- 5% discount for purchases up to ₹1000
+- 7.5% discount for purchases between ₹1001 and ₹2000
+- 10% discount for purchases between ₹2001 and ₹3000
+- 15% discount for purchases above ₹3000
+Write a program using switch and if statements to compute the net amount to be paid by the customer.*\
+
+import java.util.Scanner;
+
+public class Discount{
+public static void main(String[] args){
+
+Scanner scanner = new Scanner(System.in);
+
+int itemType;
+int purchaseAmount;
+double discount = 0;
+
+System.out.println("Enter item type(1 for clothing or 2 for footwear): ");
+itemType = scanner.nextInt();
+
+System.out.println("Enter your amount: ");
+purchaseAmount = scanner.nextInt();
+
+switch(itemType){
+case 1:
+if(purchaseAmount <= 1000){
+discount = 0.0;
+}
+
+else if(purchaseAmount >= 1001 && purchaseAmount <= 2000 ){
+discount = 5.0;
+}
+
+else if(purchaseAmount >= 2001 && purchaseAmount <= 3000){
+discount = 7.50;
+}
+
+else if(purchaseAmount >= 3001){
+discount = 10.0;
+}
+break;
+
+case 2:
+if(purchaseAmount <= 1000){
+discount = 5.0;
+}
+
+else if(purchaseAmount >= 1001 && purchaseAmount <= 2000){
+discount = 7.50;
+}
+
+else if(purchaseAmount >= 2001 && purchaseAmount <= 3000){
+discount = 10.0;
+}
+
+else if(purchaseAmount >= 3001){
+discount = 15.0;
+}
+break;
+
+default:
+System.out.println("Invalid input");
+scanner.close();
+return;
+
+}
+
+double netAmount = purchaseAmount - (purchaseAmount*discount/100);
+System.out.printf("Net amount to be paid: %.2f\n", netAmount);
+scanner.close();
+
+}
+}
