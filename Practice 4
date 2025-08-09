@@ -1,0 +1,56 @@
+/* Given a list of marks ranging from 0 to 100, write a program to compute and print the number of students who have obtained marks:
+In the range of 81 to 100,
+In the range on 61 to 80,
+In the range of 41 to 60,
+Less than 40
+*/
+
+import java.util.Scanner;
+
+public class Marks{
+    public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+        int n;
+        int range81to100 = 0;
+        int range61to80 = 0;
+        int range41to60 = 0;
+        int rangelessthan40 = 0;
+
+        System.out.println("Enter number of students: ");
+        n = scanner.nextInt();
+
+        System.out.println("Enter marks for " + n + " students (0 to 100):");
+        for(int i = 0; i < n; i++){
+            int mark = scanner.nextInt();
+
+            if(mark >= 81 && mark <= 100){
+                range81to100++;
+            }
+
+            else if(mark >= 61 && mark <= 80){
+                range61to80++;
+            }
+
+            else if(mark >= 41 && mark <= 60){
+                range41to60++;
+            }
+
+            else if(mark <= 40){
+                rangelessthan40++;
+            }
+
+            else{
+                System.out.println("Invalid input");
+
+            }
+        }
+        System.out.println("81 to 100     : " + range81to100);
+        System.out.println("61 to 80      : " + range61to80);
+        System.out.println("41 to 60      : " + range41to60);
+        System.out.println("Less than 40  : " + rangelessthan40);
+
+        scanner.close();
+    }
+
+}
