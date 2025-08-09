@@ -1,0 +1,23 @@
+\* Write a program to convert the given temperature in fahrenheit to celsius using the following conversion formula C = (F-32)/1.8 , and display the values in tabular form. *\
+import java.util.Scanner;
+
+public class Temperature{
+    public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+        double tempFarenheit;
+
+        System.out.println("Enter the temperature in Farenheit: ");
+        tempFarenheit = scanner.nextDouble();
+
+        double tempCelsius = (tempFarenheit-32)/1.8;
+
+        System.out.println("\nTemperature Conversion");
+        System.out.println("----------------------------");
+        System.out.printf("%-15s %-15s\n", "Fahrenheit", "Celsius");
+        System.out.printf("%-15.2f %-15.2f\n", tempFarenheit, tempCelsius);
+
+        scanner.close();
+
+    }
+}
