@@ -1,0 +1,48 @@
+\* Develop a Java class to represent information about software company employees  with  information like salary code ,designation,salary,department. Implement method to display the employee  details *\
+import java.util.Scanner;
+
+public class Employee{
+
+    public String SalaryCode;
+    public String Designation;
+    public String Department;
+    public int Salary;
+
+    public Employee(String SalaryCode, String Designation, String Department, int Salary){
+        this.SalaryCode = SalaryCode;
+        this.Designation = Designation;
+        this.Department = Department;
+        this.Salary = Salary;
+    }
+
+    public void DisplayDetails(){
+        System.out.println("Employee Details");
+        System.out.println("Salary code: " + this.SalaryCode);
+        System.out.println("Designation: " + this.Designation);
+        System.out.println("Department: " + this.Department);
+        System.out.println("Salary: " + this.Salary);
+    }
+
+    public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter SalaryCode: ");
+        String SalaryCode = scanner.nextLine();
+
+        System.out.println("Enter Designation: ");
+        String Designation = scanner.nextLine();
+
+        System.out.println("Enter Department: ");
+        String Department = scanner.nextLine();
+
+        System.out.println("Enter Salary: ");
+        int Salary = scanner.nextInt();
+
+        scanner.close();
+        Employee emp1 = new Employee(SalaryCode,Designation,Department,Salary);
+
+        emp1.DisplayDetails();
+
+    }
+}
