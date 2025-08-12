@@ -68,21 +68,4 @@ public class Banking{
     }
 }
 
-static double withdraw(double balance){
-double amount;
-System.out.println("Enter the amount to be withdrawn: ");
-amount = scanner.nextDouble();
 
-if(amount > balance){
-System.out.println("Insufficient Balance");
-return 0;
-}
-else if(amount < 0){
-System.out.println("Amount cannot be negative");
-return 0;
-}
-else{
-return amount;
-}
-}
-}
